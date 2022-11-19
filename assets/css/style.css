@@ -110,7 +110,7 @@
     height: 100%;
     background-color: #03e0f8;
     transform: scaleX(0);
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* Page Content */
