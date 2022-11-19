@@ -136,7 +136,7 @@
     background-image: url(../images/synthwave-img2.jpeg);
 }
 
-/* scales the backgorund image */
+/* scales the horizontal scroll bar for larger screens */
 @media screen and (min-width: 2500px) {
     .scrollHor {
         width: 91%;
