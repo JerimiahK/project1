@@ -62,13 +62,14 @@
     overflow: hidden;
 }
 
- #page .bg {
+#page .bg {
     position: relative;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
     background-size: 100vw;
+    background-repeat: no-repeat;
     background-image: url(../images/synthwave-img2.jpeg); 
 }
 
@@ -83,22 +84,90 @@
     z-index: 10;
 }
 
+.scrollBarVert {
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    position: fixed;
+    z-index: 20;
+    right: 0;
+    top: 0;
+}
+
 .scrollArrow {
     color: #03e0f8;
     animation-duration: 2s;
     font-size: 90px;
 }
 
-.scrollTrack {
+.scrollHorizontal {
     width: 160px;
     height: 5px;
     border: 1px solid #03e0f8;
 }
 
-.scrollProgress {
+.scrollVert {
+    width: 10px;
+    height: 100vh;
+    border: 1px solid #03e0f8;
+}
+
+.scrollHor{
     transform-origin: left center;
     width: 100%; 
     height: 100%;
     background-color: #03e0f8;
     transform: scaleX(0);
+}
+
+.scrollVerticle {
+    transform-origin: top;
+    width: 100%;
+    height: 100%;
+    background-color: #03e0f8;
+    transform: scaleY(0);
+}
+
+/* scales the backgorund image */
+@media screen and (max-width: 425px) {
+    #page .bg {
+        background-size: 100vh;
+        width: 100vw;
+    }
+}
+/* controls the page scrolling to verticle */
+@media screen and (max-width: 425px) {
+    #page {
+        width: 100vw;
+        height: 400vh;
+    }
+}
+
+/* control the intro font size */
+@media screen and (max-width: 425px) {
+    #cover .intro-text {
+        font-size: 300%;
+    }
+}
+
+/* hides scroll arrow */
+@media screen and (max-width: 425px) {
+    .scrollArrow {
+        display: none;
+    }
+}
+
+/* hides horizontal scroll bar */
+@media screen and (max-width: 425px) {
+    .scrollHorizontal {
+        display: none;
+    }
+}
+
+/* unhides vertical scroll */
+@media screen and (max-width: 425px) {
+    .scrollVert {
+        display: block;
+    }
 }
