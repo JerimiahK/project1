@@ -96,7 +96,7 @@
 }
 
 .scrollVert {
-    transform-origin: top;
+    transform-origin: top center;
     width: 5px;
     height: 100vh;
     background-color: #03e0f8;
@@ -105,12 +105,13 @@
 }
 
 .scrollHor{
+    display: block;
     transform-origin: left center;
     width: 100%; 
     height: 100%;
     background-color: #03e0f8;
     transform: scaleX(0);
-    overflow: auto;
+    overflow: hidden;
 }
 
 /* Page Content */
