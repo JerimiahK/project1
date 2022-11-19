@@ -3,13 +3,13 @@ window.onload = function () {
   const verticleProg = $("#scrollVert");
 
   window.addEventListener("scroll", () => {
-    const scrolled = window.scrollX * 0.00023;
+    const scrolled = window.scrollX * 0.000231;
     horizontalProg[0].style.transform = `scaleX(${scrolled}`;
     console.log(scrolled);
   });
 
   window.addEventListener("scroll", () => {
-    const scrollVert = window.scrollY * 0.0019;
+    const scrollVert = window.scrollY * 0.00039;
     console.log(scrollVert);
     verticleProg[0].style.transform = `scaleY(${scrollVert}`;
   });

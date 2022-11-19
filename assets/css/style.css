@@ -90,17 +90,18 @@
 
 .scrollVerticle {
     display: none;
-    width: 5px;
-    height: 100%;
+    width: 10px;
+    height: 100vh;
     border: 1px solid #03e0f8;
 }
 
 .scrollVert {
-    transform-origin: top;
+    transform-origin: top center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #03e0f8;
     transform: scaleY(0);
+    overflow: hidden;
 }
 
 .scrollHor{
@@ -138,7 +139,7 @@
 /* scales the backgorund image */
 @media screen and (max-width: 2500px) {
     .scrollHor {
-        width: 90%;
+        width: 91%;
     }
 }
 
