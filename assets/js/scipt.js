@@ -9,7 +9,7 @@ window.onload = function () {
   });
 
   window.addEventListener("scroll", () => {
-    const scrollVert = window.scrollY * 0.000069;
+    const scrollVert = window.scrollY * 0.000019;
     console.log(scrollVert);
     verticleProg[0].style.transform = `scaleY(${scrollVert}`;
   });
