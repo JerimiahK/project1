@@ -98,7 +98,7 @@
 .scrollVert {
     transform-origin: top center;
     width: 5px;
-    height: 100vh;
+    height: 100%;
     background-color: #03e0f8;
     transform: scaleY(0);
     overflow: hidden;
@@ -137,12 +137,11 @@
 }
 
 /* scales the backgorund image */
-/* @media screen and (max-width: 425px) {
-    #page .bg {
-        background-size: 100vh;
-        width: 100vw;
+@media screen and (max-width: 2500px) {
+    .scrollHor {
+        width: 90%;
     }
-} */
+}
 
 /* controls the page scrolling to verticle */
 @media screen and (max-width: 425px) {
