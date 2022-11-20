@@ -54,12 +54,11 @@
 }
 
 /* Scroll Bar */
-body::-webkit-scrollbar {
-    -webkit-appearance: none;
-    /* display: none;
+::-webkit-scrollbar {
+    display: none;
     background: transparent;
     height: 0px;
-    width: 0px; */
+    width: 0px;
 }
 
 .scrollBar {
@@ -88,7 +87,7 @@ body::-webkit-scrollbar {
     background-color: yellow;
 }
 
-.scrollHorProgress{
+.scrollHorProgress {
     transform-origin: left center;
     height: 100%;
     background-color: #03e0f8;
@@ -121,9 +120,10 @@ body::-webkit-scrollbar {
 #page {
     height: 100vh;
     width: 400vw;
-    position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
+    overflow: hidden;
     background-color: rgb(249, 253, 24);
 }
 
@@ -140,11 +140,35 @@ body::-webkit-scrollbar {
     background-image: url(../images/synthwave-img2.jpeg);
 }
 
-/* @media screen and (max-width: 768px) {
-    ::-webkit-scrollbar {
-        -webkit-appearance: none;
+.header {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#header-text {
+    position: relative;
+    left: 200px;
+    top: 100px;
+    font-size: 500%;
+    font-family: 'Chicle', cursive;
+    background-image: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animate 5s linear infinite;
+    text-shadow: 1px 1px 45px #a600ff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes animate {
+    0%, 100% {
+        filter: hue-rotate(0deg)
     }
-} */
+    50% {
+        filter: hue-rotate(360deg)
+    }
+}
 
 /* controls the page scrolling to verticle */
 @media screen and (max-width: 425px) {
@@ -179,5 +203,14 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 425px) {
     .scrollVerticle {
         display: block;
+    }
+}
+
+/* header text scale */ 
+@media screen and (max-width: 425px) {
+    #header-text {
+        left: 30px;
+        top: 73px;
+        font-size: 300%;
     }
 }
