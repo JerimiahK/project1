@@ -107,14 +107,12 @@
     display: none;
     width: 10px;
     height: 100vh;
-    /* background-color: yellow; */
     border: 1px solid #03e0f8;
 }
 
 .scrollVertProgress {
     transform-origin: top;
-    /* width: 100%;
-    height: 100%; */
+    height: 100%;
     background-color: #03e0f8;
 }
 
