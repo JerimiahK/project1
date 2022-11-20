@@ -209,9 +209,9 @@
 /* header text scale */ 
 @media screen and (max-width: 425px) {
     #header-text {
-        left: 70px;
-        top: 93px;
-        font-size: 300%;
+        left: 0px;
+        top: 0px;
+        font-size: 560%;
     }
 }
 
