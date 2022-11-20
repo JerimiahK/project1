@@ -1,16 +1,17 @@
 window.onload = function () {
-  const horizontalProg = $("#scrollHor");
-  const verticleProg = $("#scrollVert");
+  let progress = $("#scrollHorProgress");
+  let vertProgress = $("#scrollVertProgress");
 
-  window.addEventListener("scroll", () => {
-    const scrolled = window.scrollX * 0.000231;
-    horizontalProg[0].style.transform = `scaleX(${scrolled}`;
-    console.log(scrolled);
-  });
+  window.onscroll = function () {
+    let percentScrolled = window.scrollX / window.innerWidth / 3;
+    progress[0].style.transform = `scaleX(${percentScrolled}`;
+    let vertPercentScrolled = window.scrollY / window.innerHeight / 3;
+    vertProgress[0].style.transform = `scaleY(${vertPercentScrolled})`;
+  };
 
-  window.addEventListener("scroll", () => {
-    const scrollVert = window.scrollY * 0.0059;
-    console.log(scrollVert);
-    verticleProg[0].style.transform = `scaleY(${scrollVert}`;
-  });
+  // window.onscroll = function () {
+  //   let vertPercentScrolled = window.scrollY / window.innerHeight / 3;
+  //   vertProgress[0].style.transform = `scaleY(${vertPercentScrolled})`;
+  //   console.log(vertProgress);
+  // };
 };
