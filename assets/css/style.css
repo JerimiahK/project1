@@ -175,7 +175,8 @@
 
 .info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
     position: absolute;
     top: 0;
     left: 100%;
@@ -217,6 +218,57 @@
     -webkit-text-fill-color: transparent;
 }
 
+.drive {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    width: 28%;
+    height: 100%;
+}
+
+.drive h1 {
+    position: relative;
+    left: 50%;
+    padding-bottom: 0px;
+    font-size: 400%;
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+.aboutImgContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    margin-right: 20px;
+    border: solid 2px black;
+}
+
+#aboutImg {
+    height: 100%;
+    width: 100%;
+}
+
+.imgTextContainer {
+    position: relative;
+    top: 76px;
+    font-size: 75%;
+    overflow: auto;
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 85%;
+}
+
+/* adjusts drive image text container */
+@media screen and (max-width: 425px) {
+    .imgTextContainer {
+        top: 0px;
+        font-size: 100%;
+    }
+}
+
 /* removes border-right from header on mobile*/
 @media screen and (max-width: 425px) {
     #page .bg {
@@ -224,12 +276,40 @@
     }
 }
 
+/* drive section mobile adjustments */
+@media screen and (max-width: 425px) {
+    .drive {
+        width: 100%;
+        height: 85%;
+    }
+}
+
+/* adjusts drive h1 */
+@media screen and (max-width: 425px) {
+    .drive h1 {
+        position: relative;
+        left: 110px;
+    }
+}
+
+/* adjusts drive image for mobile */
+@media screen and (max-width: 425px) {
+    .aboutImgContainer {
+        position: relative;
+        top: -70px;
+        left: 65%;
+        width: 20%;
+        height: 20%;
+    }
+}
+
 /* about section mobile adjustments */
 @media screen and (max-width: 425px) {
     .info {
-        height: 40%;
-        padding: 10px;
-        font-size: 64%;
+        padding-right: 30px;
+        flex-direction: column;
+        height: 45%;
+        font-size: 55%;
         border-right: none;
         position: inherit;
         top: 0px;
@@ -241,11 +321,12 @@
 /* sets width of about section to 100% on mobile */
 @media screen and (max-width: 425px) {
     .about {
-        height: 50%;
+        height: 100%;
         width: 100%;
     }
 }
 
+/* about h2 text align */
 @media screen and (max-width: 425px) {
     .about h2 {
         text-align: center;
@@ -297,6 +378,7 @@
     }
 }
 
+/* puts border bottom on header for mobile */
 @media screen and (max-width: 425px) {
     #page .bg {
         border-bottom: solid 5px black;
