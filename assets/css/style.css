@@ -184,6 +184,7 @@
     width: 100%;
     padding: 20px 0 0 30px;
     border-right: solid 5px black;
+    overflow: auto;
 }
 
 .about {
@@ -308,7 +309,7 @@
     .info {
         padding-right: 30px;
         flex-direction: column;
-        height: 45%;
+        height: 40%;
         font-size: 55%;
         border-right: none;
         position: inherit;
@@ -382,5 +383,46 @@
 @media screen and (max-width: 425px) {
     #page .bg {
         border-bottom: solid 5px black;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~400px and below~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* header text scale */
+@media screen and (max-width: 400px) {
+    #header-text {
+        left: 0px;
+        top: 0px;
+        font-size: 405%;
+    }
+}
+
+/* adjusts drive image for mobile 375px below */
+@media screen and (max-width: 375px) {
+    .aboutImgContainer {
+        position: relative;
+        top: -200px;
+        left: 70%;
+        /* width: 35%; */
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .drive h1 {
+        position: relative;
+        top: -100px;
+        left: 60px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .imgTextContainer {
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .info {
+        height: 50%;
     }
 }
